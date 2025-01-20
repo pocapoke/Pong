@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlcaqqh54gxuh"]
+
+[ext_resource type="PackedScene" uid="uid://bvexckda64fxe" path="res://Resources/player.tscn" id="1_5v700"]
+[ext_resource type="Script" path="res://Scene/Main.cs" id="1_lv1c3"]
+[ext_resource type="Script" path="res://Resources/player2.cs" id="2_5am0p"]
+[ext_resource type="PackedScene" uid="uid://d08ricdcdr6dc" path="res://Resources/ball.tscn" id="3_3kqgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y17si"]
+size = Vector2(92, 649)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pceb3"]
+size = Vector2(92, 1153.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41mtg"]
+size = Vector2(92, 1151.5)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_lv1c3")
+
+[node name="Left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-42, 323.5)
+shape = SubResource("RectangleShape2D_y17si")
+
+[node name="Right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(1195, 325)
+shape = SubResource("RectangleShape2D_y17si")
+
+[node name="Top" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(576.25, -42)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_pceb3")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Bottom" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(577.25, 691)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_41mtg")
+
+[node name="Player" parent="." instance=ExtResource("1_5v700")]
+position = Vector2(35, 323.5)
+
+[node name="Player2" parent="." instance=ExtResource("1_5v700")]
+position = Vector2(1115, 323.5)
+script = ExtResource("2_5am0p")
+
+[node name="Ball" parent="." instance=ExtResource("3_3kqgt")]
+position = Vector2(577, 312)
