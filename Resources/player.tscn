@@ -6,13 +6,13 @@
 load_path = "res://.godot/imported/left_pallete.png-fddd62978803b2bf1e2f0d492c5affb8.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k45m"]
-size = Vector2(36, 198)
+size = Vector2(12, 112)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_fpbrv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4.5, 6.1875)
+scale = Vector2(1.5, 3.5)
 texture = SubResource("CompressedTexture2D_mgrnh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

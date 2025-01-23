@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{654D5E58-2575-4824-89B2-81D60D8B5883}|Pong.csproj|c:\\users\\pocat\\onedrive\\documents\\github\\pong\\scene\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{654D5E58-2575-4824-89B2-81D60D8B5883}|Pong.csproj|solutionrelative:scene\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Scene\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Scene\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\player2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\player2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\USERS\\POCAT\\ONEDRIVE\\DOCUMENTS\\GITHUB\\PONG\\Scene\\Player.cs",
-              "RelativeDocumentMoniker": "Scene\\Player.cs",
-              "ToolTip": "C:\\USERS\\POCAT\\ONEDRIVE\\DOCUMENTS\\GITHUB\\PONG\\Scene\\Player.cs",
-              "RelativeToolTip": "Scene\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Scene\\Main.cs",
+              "RelativeDocumentMoniker": "Scene\\Main.cs",
+              "ToolTip": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Scene\\Main.cs",
+              "RelativeToolTip": "Scene\\Main.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T10:49:04.499Z",
+              "WhenOpened": "2025-01-20T11:57:28.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ball.cs",
+              "DocumentMoniker": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\ball.cs",
+              "RelativeDocumentMoniker": "Resources\\ball.cs",
+              "ToolTip": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\ball.cs",
+              "RelativeToolTip": "Resources\\ball.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T11:51:04.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "player2.cs",
+              "DocumentMoniker": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\player2.cs",
+              "RelativeDocumentMoniker": "Resources\\player2.cs",
+              "ToolTip": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\player2.cs",
+              "RelativeToolTip": "Resources\\player2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T11:43:18.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\Player.cs",
+              "RelativeDocumentMoniker": "Resources\\Player.cs",
+              "ToolTip": "C:\\Users\\pocat\\OneDrive\\Documents\\GitHub\\Pong\\Resources\\Player.cs",
+              "RelativeToolTip": "Resources\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T11:15:52.755Z",
               "EditorCaption": ""
             }
           ]
