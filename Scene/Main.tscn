@@ -10,7 +10,7 @@
 size = Vector2(92, 405)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pceb3"]
-size = Vector2(92, 806)
+size = Vector2(92, 825)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41mtg"]
 size = Vector2(92, 828)
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_y17si")
 [node name="Top" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(311, -46)
+position = Vector2(326, -46)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_pceb3")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
@@ -41,7 +41,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 [node name="Bottom" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2(319, 447)
+position = Vector2(326, 447)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_41mtg")
 
