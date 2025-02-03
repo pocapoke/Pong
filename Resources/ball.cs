@@ -9,7 +9,7 @@ public partial class ball : CharacterBody2D
     public override void _Ready()
     {
         base._Ready();
-        Velocity = new Vector2(600, 0);
+        Velocity = new Vector2(300, 100);
     }
 
 
