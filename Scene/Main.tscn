@@ -1,81 +1,137 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlcaqqh54gxuh"]
+[gd_scene load_steps=16 format=3 uid="uid://dlcaqqh54gxuh"]
 
-[ext_resource type="PackedScene" uid="uid://bvexckda64fxe" path="res://Resources/player.tscn" id="1_5v700"]
-[ext_resource type="Script" path="res://Scene/Main.cs" id="1_lv1c3"]
-[ext_resource type="Script" path="res://Resources/player2.cs" id="2_5am0p"]
-[ext_resource type="Script" path="res://Resources/Top.cs" id="2_p4jyr"]
-[ext_resource type="PackedScene" uid="uid://d08ricdcdr6dc" path="res://Resources/ball.tscn" id="3_3kqgt"]
-[ext_resource type="Script" path="res://Resources/Bottom.cs" id="3_tiod6"]
+[ext_resource type="Texture2D" uid="uid://c2ms35ld6w04j" path="res://Resources/ball.png" id="1_531e4"]
+[ext_resource type="Script" path="res://Scene/Main.gd" id="1_bwwr7"]
+[ext_resource type="Script" path="res://Scene/Ball.gd" id="2_r21ns"]
+[ext_resource type="AudioStream" uid="uid://cbjaa42wrtgwd" path="res://Resources/DING.mp3" id="4_s44bu"]
+[ext_resource type="Script" path="res://Scene/Players.gd" id="4_utjpv"]
 [ext_resource type="Texture2D" uid="uid://cbmbsxq0lp55g" path="res://Resources/separator.png" id="5_8lwwv"]
+[ext_resource type="Script" path="res://Scene/CPU.gd" id="6_uxni3"]
+[ext_resource type="AudioStream" uid="uid://sg5mr7ufitg8" path="res://Resources/game-start.mp3" id="7_7lhgu"]
+[ext_resource type="AudioStream" uid="uid://cpb3hl8f3k4f1" path="res://Resources/Win.mp3" id="9_1e1gk"]
+[ext_resource type="AudioStream" uid="uid://bjtm4rttr23hb" path="res://Resources/game-ove.mp3" id="10_8crad"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y17si"]
-size = Vector2(92, 405)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvs64"]
+size = Vector2(16, 16)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_74gxf"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_208wq"]
+size = Vector2(63.75, 400)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pceb3"]
-size = Vector2(92, 825)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63hi7"]
+size = Vector2(640, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_41mtg"]
-size = Vector2(92, 828)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pac3p"]
+size = Vector2(640.25, 16)
 
-[node name="Node" type="Node"]
-script = ExtResource("1_lv1c3")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ris2o"]
+size = Vector2(8, 128)
 
-[node name="Left" type="Area2D" parent="."]
+[node name="Main" type="Node2D"]
+script = ExtResource("1_bwwr7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(-46, 201.5)
-shape = SubResource("RectangleShape2D_y17si")
+[node name="Ball" type="CharacterBody2D" parent="."]
+collision_mask = 3
+script = ExtResource("2_r21ns")
 
-[node name="Right" type="Area2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+texture_filter = 3
+position = Vector2(320, 200)
+texture = ExtResource("1_531e4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
-position = Vector2(685, 202)
-shape = SubResource("RectangleShape2D_y17si")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+position = Vector2(320, 200)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_uvs64")
 
-[node name="Top" type="Area2D" parent="."]
-position = Vector2(0, 2)
-script = ExtResource("2_p4jyr")
+[node name="Bounce sound" type="AudioStreamPlayer2D" parent="Ball"]
+stream = ExtResource("4_s44bu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Top"]
-position = Vector2(326, -40)
-rotation = 1.5708
-scale = Vector2(91.6489, 825.949)
-texture = SubResource("CanvasTexture_74gxf")
+[node name="Score Left" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(326, -40)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_pceb3")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Left"]
+position = Vector2(-32.125, 200)
+shape = SubResource("RectangleShape2D_208wq")
 
-[node name="Bottom" type="Area2D" parent="."]
-position = Vector2(0, 10)
-script = ExtResource("3_tiod6")
+[node name="Score Right" type="Area2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Bottom"]
-position = Vector2(326, 431.826)
-rotation = 1.5708
-scale = Vector2(91.6489, 825.949)
-texture = SubResource("CanvasTexture_74gxf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Right"]
+position = Vector2(672, 200)
+shape = SubResource("RectangleShape2D_208wq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2(326, 431.826)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_41mtg")
+[node name="Border" type="StaticBody2D" parent="."]
+collision_layer = 2
 
-[node name="Player" parent="." instance=ExtResource("1_5v700")]
-position = Vector2(35, 202)
+[node name="Top" type="CollisionShape2D" parent="Border"]
+position = Vector2(320, -8)
+shape = SubResource("RectangleShape2D_63hi7")
 
-[node name="Player2" parent="." instance=ExtResource("1_5v700")]
-position = Vector2(603, 202)
-script = ExtResource("2_5am0p")
+[node name="Bottom" type="CollisionShape2D" parent="Border"]
+position = Vector2(320, 408)
+shape = SubResource("RectangleShape2D_pac3p")
 
-[node name="Ball" parent="." instance=ExtResource("3_3kqgt")]
-position = Vector2(325, 202)
-
-[node name="Separator" type="Sprite2D" parent="."]
-position = Vector2(325, 202)
-scale = Vector2(1, 1.295)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 200)
 texture = ExtResource("5_8lwwv")
+
+[node name="Players" type="StaticBody2D" parent="."]
+script = ExtResource("4_utjpv")
+
+[node name="ColorRect" type="ColorRect" parent="Players"]
+offset_left = 12.0
+offset_top = 136.0
+offset_right = 20.0
+offset_bottom = 264.0
+size_flags_horizontal = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Players"]
+position = Vector2(16, 200)
+shape = SubResource("RectangleShape2D_ris2o")
+
+[node name="CPU" type="StaticBody2D" parent="."]
+script = ExtResource("6_uxni3")
+
+[node name="ColorRect" type="ColorRect" parent="CPU"]
+offset_left = 621.0
+offset_top = 136.0
+offset_right = 629.0
+offset_bottom = 264.0
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
+position = Vector2(625, 200)
+shape = SubResource("RectangleShape2D_ris2o")
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="Player\'s score" type="Label" parent="Hud"]
+offset_left = 233.0
+offset_right = 273.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+
+[node name="CPU\'s score" type="Label" parent="Hud"]
+offset_left = 365.0
+offset_right = 405.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+
+[node name="Ball Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Game start" type="AudioStreamPlayer2D" parent="Ball Timer"]
+stream = ExtResource("7_7lhgu")
+
+[node name="Win" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_1e1gk")
+
+[node name="Lose" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_8crad")
+
+[connection signal="body_entered" from="Score Left" to="." method="_on_score_left_body_entered"]
+[connection signal="body_entered" from="Score Right" to="." method="_on_score_right_body_entered"]
+[connection signal="timeout" from="Ball Timer" to="." method="_on_ball_timer_timeout"]

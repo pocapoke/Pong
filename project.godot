@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Pong"
-run/main_scene="res://Scene/Main.tscn"
+run/main_scene="res://Scene/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BgMusic="*res://Scene/BG music.tscn"
 
 [display]
 
