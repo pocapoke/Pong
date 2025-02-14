@@ -14,6 +14,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvs64"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ris2o"]
+size = Vector2(8, 128)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_208wq"]
 size = Vector2(63.75, 400)
 
@@ -22,9 +25,6 @@ size = Vector2(640, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pac3p"]
 size = Vector2(640.25, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ris2o"]
-size = Vector2(8, 128)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_bwwr7")
@@ -45,33 +45,6 @@ shape = SubResource("RectangleShape2D_uvs64")
 
 [node name="Bounce sound" type="AudioStreamPlayer2D" parent="Ball"]
 stream = ExtResource("4_s44bu")
-
-[node name="Score Left" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Left"]
-position = Vector2(-32.125, 200)
-shape = SubResource("RectangleShape2D_208wq")
-
-[node name="Score Right" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Right"]
-position = Vector2(672, 200)
-shape = SubResource("RectangleShape2D_208wq")
-
-[node name="Border" type="StaticBody2D" parent="."]
-collision_layer = 2
-
-[node name="Top" type="CollisionShape2D" parent="Border"]
-position = Vector2(320, -8)
-shape = SubResource("RectangleShape2D_63hi7")
-
-[node name="Bottom" type="CollisionShape2D" parent="Border"]
-position = Vector2(320, 408)
-shape = SubResource("RectangleShape2D_pac3p")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(320, 200)
-texture = ExtResource("5_8lwwv")
 
 [node name="Players" type="StaticBody2D" parent="."]
 script = ExtResource("4_utjpv")
@@ -100,6 +73,33 @@ color = Color(0, 1, 1, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
 position = Vector2(625, 200)
 shape = SubResource("RectangleShape2D_ris2o")
+
+[node name="Score Left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Left"]
+position = Vector2(-32.125, 200)
+shape = SubResource("RectangleShape2D_208wq")
+
+[node name="Score Right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Right"]
+position = Vector2(672, 200)
+shape = SubResource("RectangleShape2D_208wq")
+
+[node name="Border" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Top" type="CollisionShape2D" parent="Border"]
+position = Vector2(320, -8)
+shape = SubResource("RectangleShape2D_63hi7")
+
+[node name="Bottom" type="CollisionShape2D" parent="Border"]
+position = Vector2(320, 408)
+shape = SubResource("RectangleShape2D_pac3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 200)
+texture = ExtResource("5_8lwwv")
 
 [node name="Hud" type="CanvasLayer" parent="."]
 
